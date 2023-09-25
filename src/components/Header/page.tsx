@@ -5,22 +5,32 @@ import imgSearch from "../../../public/assets/search.svg";
 
 export function Header() {
   return (
-    <div className="py-4 flex justify-between">
-      <nav className="flex space-x-2">
-        <Image src={imgLogo} alt="Picture of the author" />
+    <div className="py-4 bg-gradient-to-b from-[#141414] to-blue-from-[#141414] ">
+      <div className="m-auto max-w-screen-2xl flex justify-between">
+        <nav className="flex items-center space-x-2">
+          <Image src={imgLogo} alt="Picture of the author" />
 
-        <ul className="flex space-x-2 text-white">
-          <li className="font-bold">Start</li>
-          <li>Shows</li>
-          <li>Movies</li>
-          <li>New</li>
-          <li>My list</li>
-        </ul>
-      </nav>
+          <ul className="flex space-x-5 text-white">
+            <li className="font-bold">Start</li>
+            <li className="hover:font-bold cursor-pointer">Shows</li>
+            <li className="hover:font-bold cursor-pointer">Movies</li>
+            <li className="hover:font-bold cursor-pointer">New</li>
+            <li className="hover:font-bold cursor-pointer">My list</li>
+          </ul>
+        </nav>
 
-      <div className="bg-red-200 flex space-x-3">
-        <Image src={imgSearch} alt="Picture of the author" />
-        <Image src={imgBell} alt="Picture of the author" />
+        <div className="flex items-center space-x-6">
+          <Image
+            src={imgSearch}
+            alt="Picture of the author"
+            className="cursor-pointer"
+          />
+          <Image
+            src={imgBell}
+            alt="Picture of the author"
+            className="cursor-pointer"
+          />
+        </div>
       </div>
     </div>
   );

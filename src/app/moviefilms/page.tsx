@@ -6,7 +6,7 @@ export default function MovieFilms() {
   return (
     <>
       <main>
-        <Image src={imgLogo} alt="" className="w-full relative" />
+        <Image src={imgLogo} alt="" className="w-full relative h-96 bg-cover" />
 
         <div className="absolute top-0 left-0 right-0 bottom">
           <Header />

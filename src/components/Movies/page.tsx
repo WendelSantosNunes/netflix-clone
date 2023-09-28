@@ -60,8 +60,6 @@ export function Movies({ title, path }: MoviesProps) {
     }
   };
 
-  movies.map((item) => console.log(item.id));
-
   return (
     <>
       <div className="flex items-center mb-4">

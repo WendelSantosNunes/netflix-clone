@@ -95,14 +95,20 @@ export function Movies({ title, path }: MoviesProps) {
           {movies.map((item, index) => {
             return (
               item.backdrop_path && (
-                <Link href={`/moviefilms`} key={index}>
+                <Link
+                  href={{
+                    pathname: "/moviefilms",
+                    query: { id: `${item.id}` },
+                  }}
+                  key={index}
+                >
                   <div className="w-52 h-80">
                     <Image
                       key={index}
                       src={`${imagen}${item.poster_path}`}
                       width={200}
                       height={320}
-                      alt=""
+                      alt={`${item.id}`}
                       className="rounded-xl hover:border-white hover:border"
                     />
                   </div>

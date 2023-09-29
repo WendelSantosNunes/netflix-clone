@@ -47,4 +47,14 @@ export const getMovies = async (path: string) => {
   }
 }
 
+export const getMovie = async (id: string) => {
+  try{
+    let url = `https://api.themoviedb.org/3/movie/${id}?language=pt-BR`;
+    const response = await fetch(url, options)
+    return await response.json();
+  }catch (error) {
+    console.log("Error getMovie: ", error)
+  }
+}
+
 export default categories;

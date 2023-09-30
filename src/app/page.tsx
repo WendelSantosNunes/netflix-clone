@@ -17,12 +17,14 @@ import { Movies } from "@/components/Movies/page";
 export default function Home() {
   return (
     <main>
+      <Header />
+
       <Image src={imgLogo} alt="" className="w-full relative" />
 
       <div className="absolute top-0 left-0 right-0 bottom">
-        <Header />
+        {/* <Header /> */}
 
-        <div className="mx-auto mt-96 max-w-screen-2xl text-white">
+        <div className="mx-auto mt-96 max-2xl:mt-80 max-w-screen-2xl text-white">
           <div className="flex items-center space-x-2 mb-7">
             <Image src={imgNetflix} alt="" />
             <p className="font-bold">SHOW</p>
@@ -33,13 +35,13 @@ export default function Home() {
           <div className="flex space-x-4">
             <Button styles="text-black bg-white border-0 hover:bg-opacity-50 font-bold">
               <>
-                <IconPlayerPlayFilled /> Play
+                <IconPlayerPlayFilled /> Assistir
               </>
             </Button>
             <Button styles="text-black font-bold bg-white border-0 bg-opacity-50 hover:bg-opacity-25 hover:text-white">
               <>
                 <IconInfoCircle />
-                More info
+                Mais informações
               </>
             </Button>
           </div>
